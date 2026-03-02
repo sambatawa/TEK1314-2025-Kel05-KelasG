@@ -1,14 +1,7 @@
-# TOPOLOGI PROYEK PBL MINGGU 3
-Tabel berikut menunjukkan detail jaringan untuk skenario keamanan:
+Deskripsi Skenario
 
-| Hostname                  | Peran               | Alamat IP         | Jaringan         | Sistem Operasi        | Port Terbuka    |
-| ------------------------- | ------------------- | ----------------- | ---------------- | --------------------- | --------------- |
-| PC-Attacker-Node          | Penyerang / Penguji | 192.168.5.5       | 192.168.5.0/24   | Kali Linux            | -               |
-| Web-Server(DMZ)           | Server Target (DMZ) | 192.168.15.5      | 192.168.15.0/24  | Ubuntu Server / IIS   | 80/tcp, 443/tcp |
-| Database-server(Internal) | Server Basis Data   | 192.168.25.5      | 192.168.25.0/24  | Ubuntu Server (MySQL) | 3306/tcp        |
-| PC-Monitoring-Node        | IDS / Penjaga       | 192.168.35.5      | 192.168.35.0/24  | Security Onion        | Mode Monitoring |
-| Router                    | Gerbang / Firewall  | Multi Interface   | Multi-Jaringan   | Cisco IOS             | Routing .md ACL   |
----
+Pada proyek ini, kami menggunakan skenario Internal Database Fortress, yaitu konsep jaringan di mana data penting (database) disimpan di jaringan internal yang lebih aman dan tidak bisa diakses langsung dari luar.
 
+Web server ditempatkan di area DMZ supaya tetap bisa diakses oleh attacker untuk keperluan simulasi serangan. Jadi, attacker hanya bisa berinteraksi dengan web server terlebih dahulu, tidak langsung ke database.
 
-
+Jika ingin mengakses database, harus melalui web server sebagai perantara. Selain itu, router digunakan sebagai gateway sekaligus firewall (menggunakan ACL) untuk mengatur dan membatasi akses antar jaringan. Seluruh aktivitas jaringan juga dimonitor menggunakan sistem IDS untuk mendeteksi jika ada aktivitas mencurigakan.
