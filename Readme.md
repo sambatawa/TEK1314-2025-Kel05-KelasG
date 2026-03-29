@@ -1,4 +1,4 @@
-# Proyek PBL Keamanan Siber - Kelompok 15
+# Proyek PBL Keamanan Siber - Kelompok 5 kelas G
 
 ## Anggota Kelompok
 
