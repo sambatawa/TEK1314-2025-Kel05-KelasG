@@ -26,7 +26,8 @@ Topologi jaringan yang digunakan adalah topologi sederhana berbasis satu segmen 
 | ---------------------- | ------------------------ | ------------ | --------------------- | ------------------------- |
 | PC-Attacker-Node       | Penyerang / Penguji      | 192.168.5.25 | labVM Linux (CyberOps) | -                         |
 | Target-Database-Server | Server database (Target) | 192.168.5.50 | Ubuntu Server (MySQL) | 3306 (Database), 22 (SSH) |
-| PC-Monitoring-Node     | IDS / Monitoring         | 192.168.5.75 | Security Onion        | 443 (HTTPS), 514 (TCP)    |
+| PC-Monitoring-Node     | IDS / Monitoring         | 192.168.5.75 | Security Onion        | 443 (HTTPS)      |
+
 Semua perangkat berada dalam satu subnet 192.168.5.0/24
 
 ## Detail Port dan Layanan
